@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
-$grey: rgb(243, 243, 243);
+$grey: #eff8fa;
 $maxWidth: 1200;
 @mixin adaptiv-font($pcSize, $mobSize) {
  $addSize: $pcSize - $mobSize;
@@ -14,11 +14,13 @@ html,
 body{
   background-color: $grey;
   width: 100%;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
+  min-height: 100%;
+}
+body{
+  padding: 15px;
 }
 #root{
   height: 100%;
@@ -27,9 +29,10 @@ body{
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
-  background: linear-gradient(rgba(255,255,255,1) 0%, rgba(146,233,251,1) 100%);
+  background-color: rgb(247, 247, 247);
   padding: 15px;
-  min-height: 100%;
+  box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
   h1{
     text-align: center;
     @include adaptiv-font(70, 30);
@@ -43,23 +46,38 @@ body{
 .main{
   margin: 0 auto;
   display: flex;
+  align-items: flex-start;
 }
 .about-me{
+  position: sticky;
+  top: 0;
   width: 25%;
   @media (max-width: 600px){
-    width: 70%;
+    position: static;
+    width: 100%;
+  }
+  h2{
+    @media (max-width: 600px){
+      font-weight: 800;
+      @include adaptiv-font(40, 30);
+    }
   }
   &__contacts{
     width: 100%;
     padding: 15px;
+    @media (max-width: 600px){
+      padding: 0;
+    }
+    &-name{
+      font-weight: 800;
+      @include adaptiv-font(30, 15);
+      margin-bottom: 15px;
+    }
     &-adress{
       font-weight: 800;
       @include adaptiv-font(20, 12);
-      @media (max-width: 600px){
-        text-align: center;
-      }
     }
-    &__tel-number{
+    &-tel-number{
       margin-top: 15px;
       a{
         display: flex;
@@ -68,11 +86,17 @@ body{
         text-decoration: none;
         color: black;
         font-weight: 600;
+        margin-bottom: 10px;
         @include adaptiv-font(14, 12);
         .tel-img{
           min-width: 20%;
           width: 20%;
+          @media (max-width: 600px){
+              min-width: 20px;
+              width: 20px;
+          }
           img{
+            display: block;
             width: 100%;
           }
         }
@@ -81,6 +105,7 @@ body{
           overflow: hidden;
           text-overflow: ellipsis;
           max-width: 77%;
+          white-space: nowrap;
         }
       }
     }
@@ -89,27 +114,26 @@ body{
 .advance-about-me{
   width: 75%;
   margin-left: 20px;
-  padding: 15px;
   @media (max-width: 600px) {
     margin-left: 0;
+    width: 100%;
   }
   .category-about{
     margin-bottom: 15px;
     border-bottom: 1px solid gray;
     padding-bottom: 10px;
     &__title{
-      @include adaptiv-font(50, 35);
+      @include adaptiv-font(40, 30);
       font-weight: 800;
       margin-bottom: 15px;
+      @media (max-width: 600px){
+        text-align: center;
+      }
     }
     &__description{
       @include adaptiv-font(30, 16);
       font-weight: 600;
       margin-bottom: 10px;
-      &__expirience{
-        @include adaptiv-font(20, 12);
-        font-weight: 600;
-      }
       &-tech{
         width: 100%;
         display: flex;
@@ -184,15 +208,31 @@ body{
           }
         }
         &__title{
+          color:rgb(30, 67, 136);
           margin-top: 15px;
           @include adaptiv-font(24, 12);
           font-weight: 600;
         }
       }
     }
-    &__expierence,
+    &__expirience,
     &__specialty{
       margin-bottom: 5px;
+      @include adaptiv-font(20, 12);
+      font-weight: 600;
+    }
+    &__graph{
+      padding-top: 100%;
+      position: relative;
+      .graph-wrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include adaptiv-font(20, 12);
+      }
     }
   }
 }

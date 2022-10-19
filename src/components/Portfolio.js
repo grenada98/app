@@ -5,7 +5,7 @@ import { Contacts } from './Contacts';
 export const Portfolio = () => {
     return(
             <div className="main-wrapper">
-                <h1>Портфоліо</h1>
+                <h1>Portfolio</h1>
                 <div className="main">
                     <Contacts/>
                     <AboutMe/>

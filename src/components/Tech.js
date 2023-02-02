@@ -8,7 +8,8 @@ export const Tech = () => {
         { id: 3, name: "JavaScript", src: process.env.PUBLIC_URL + "/img/js.png" },
         { id: 4, name: "SASS", src: process.env.PUBLIC_URL + "/img/sass.png" },
         { id: 5, name: "GitHub", src: process.env.PUBLIC_URL + "/img/github.png" },
-        { id: 6, name: "Figma", src: process.env.PUBLIC_URL + "/img/figma.png" }]
+        { id: 6, name: "Figma", src: process.env.PUBLIC_URL + "/img/figma.png" },
+        { id: 6, name: "ReactJS", src: process.env.PUBLIC_URL + "/img/react.png" }]
     },
     {
         type: "site", data: [{ id: 1, name: "SmmSpace", src: process.env.PUBLIC_URL + "/img/site_1.jpg", link: "https://grenada98.github.io/smm_space/", type: "site" },

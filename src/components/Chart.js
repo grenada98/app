@@ -12,7 +12,7 @@ const data = [
   },
   {
     tech: 'JavaScript',
-    fullMark: 4,
+    fullMark: 5,
   },
   {
     tech: 'SASS',
@@ -20,7 +20,7 @@ const data = [
   },
   {
     tech: 'ReactJS',
-    fullMark: 3,
+    fullMark: 4,
   }
 ];
 

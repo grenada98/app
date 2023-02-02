@@ -11,13 +11,14 @@ export const Tech = () => {
         { id: 6, name: "Figma", src: process.env.PUBLIC_URL + "/img/figma.png" }]
     },
     {
-        type: "site", data: [{ id: 1, name: "SmmSpace", src: process.env.PUBLIC_URL + "/img/site_1.jpg", link: "https://grenada98.github.io/test/dist/index.html", type: "site" },
+        type: "site", data: [{ id: 1, name: "SmmSpace", src: process.env.PUBLIC_URL + "/img/site_1.jpg", link: "https://grenada98.github.io/smm_space/", type: "site" },
         { id: 2, name: "Coffee", src: process.env.PUBLIC_URL + "/img/site_2.jpg", link: "https://grenada98.github.io/coffee/dist/" },
         { id: 3, name: "Data processing", src: process.env.PUBLIC_URL + "/img/site_3.jpg", link: "https://grenada98.github.io/dataprocessing/" },
         { id: 4, name: "Growmade", src: process.env.PUBLIC_URL + "/img/site_4.jpg", link: "https://grenada98.github.io/growmade/" },
         { id: 5, name: "Minimo", src: process.env.PUBLIC_URL + "/img/site_5.jpg", link: "https://grenada98.github.io/minimo/task_3.html" },
         { id: 6, name: "Wez-catalog", src: process.env.PUBLIC_URL + "/img/wez-catalog.jpg", link: "https://https://grenada98.github.io/wez-catalog-product/dist/" },
-        { id: 7, name: "ToDo list (ReactJS)", src: process.env.PUBLIC_URL + "/img/todo.jpg", link: "https://todolist-grenada98.vercel.app/" }]
+        { id: 7, name: "ToDo list (ReactJS)", src: process.env.PUBLIC_URL + "/img/todo.jpg", link: "https://todolist-grenada98.vercel.app/" },
+        { id: 8, name: "Enlingo (ReactJS)", src: process.env.PUBLIC_URL + "/img/enlingo.jpg", link: "https://enlingo.vercel.app/"}]
     }
     ]
     return (

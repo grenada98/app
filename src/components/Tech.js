@@ -9,7 +9,8 @@ export const Tech = () => {
         { id: 4, name: "SASS", src: process.env.PUBLIC_URL + "/img/sass.png" },
         { id: 5, name: "GitHub", src: process.env.PUBLIC_URL + "/img/github.png" },
         { id: 6, name: "Figma", src: process.env.PUBLIC_URL + "/img/figma.png" },
-        { id: 6, name: "ReactJS", src: process.env.PUBLIC_URL + "/img/react.png" }]
+        { id: 6, name: "ReactJS", src: process.env.PUBLIC_URL + "/img/react.png" },
+        { id: 7, name: "Redux", src: process.env.PUBLIC_URL + "/img/redux.png" }]
     },
     {
         type: "site", data: [{ id: 1, name: "SmmSpace", src: process.env.PUBLIC_URL + "/img/site_1.jpg", link: "https://grenada98.github.io/smm_space/", type: "site" },
@@ -19,7 +20,9 @@ export const Tech = () => {
         { id: 5, name: "Minimo", src: process.env.PUBLIC_URL + "/img/site_5.jpg", link: "https://grenada98.github.io/minimo/task_3.html" },
         { id: 6, name: "Wez-catalog", src: process.env.PUBLIC_URL + "/img/wez-catalog.jpg", link: "https://https://grenada98.github.io/wez-catalog-product/dist/" },
         { id: 7, name: "ToDo list (ReactJS)", src: process.env.PUBLIC_URL + "/img/todo.jpg", link: "https://todolist-grenada98.vercel.app/" },
-        { id: 8, name: "Enlingo (ReactJS)", src: process.env.PUBLIC_URL + "/img/enlingo.jpg", link: "https://enlingo.vercel.app/"}]
+        { id: 8, name: "Enlingo (ReactJS)", src: process.env.PUBLIC_URL + "/img/enlingo.jpg", link: "https://enlingo.vercel.app/"},
+        { id: 9, name: "Currency converter (ReactJS)", src: process.env.PUBLIC_URL + "/img/Converter.jpg", link: "https://convertor-sigma.vercel.app/"},
+        { id: 10, name: "CRM Dashboard (ReactJS)", src: process.env.PUBLIC_URL + "/img/crm_dashboard.jpg", link: "https://dashboard-grenada98.vercel.app/"}]
     }
     ]
     return (
@@ -35,11 +38,13 @@ export const Tech = () => {
                             <div className="category-about__description-tech">
                             {item.data.map((elem, i) => {
                                 return(
-                                            <div key={i} className="technology">
-                                                <div className="technology__img">
-                                                    <img src={elem.src} alt="technology" />
+                                            <div key={i} className="technology__wrapper">
+                                                <div className="technology__item">
+                                                    <div className="technology__img">
+                                                        <img src={elem.src} alt="technology" />
+                                                    </div>
+                                                    <div className="technology__name">{elem.name}</div>
                                                 </div>
-                                                <div className="technology__name">{elem.name}</div>
                                             </div>
                                     )
                                 }

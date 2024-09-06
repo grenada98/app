@@ -30,7 +30,6 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://grenada98.github.io/app/",
   "browserslist": {
     "production": [
       ">0.2%",
